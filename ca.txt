@@ -1,0 +1,58 @@
+﻿using System;
+namespace ConsoleApp1
+{
+    class Program
+    {
+      
+        static void Main(string[] args)
+        {
+            double var1;
+            double var2;
+            char oper;
+            string str;
+            Console.WriteLine("enter first number");
+            str = Console.ReadLine();
+            var1 = Convert.ToDouble(str);
+            Console.WriteLine("enter second number");
+            str = Console.ReadLine();
+            var2 = Convert.ToDouble(str);
+            Console.WriteLine("enter operator");
+            str = Console.ReadLine();
+            oper = Convert.ToChar(str);
+            Calculator(var1, oper, var2);
+        }
+         static void Calculator(double var1, char oper, double var2)
+        {
+            switch (oper)
+            {
+
+                case '+':
+                    {
+                        Console.WriteLine(var1 + var2);
+                        break;
+                    }
+                case '-':
+                    {
+                        Console.WriteLine(var1 - var2);
+                        break;
+                    }
+                case '*':
+                    {
+                        Console.WriteLine(var1 * var2);
+                        break;
+                    }
+                case '/':
+                    {
+                        Console.WriteLine(var1 / var2);
+                        break;
+                    }
+                default:
+                    {
+                        Console.WriteLine("invalid operator entered");
+                        break;
+                    }
+
+            }
+        }
+    }
+}
